@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Officer List</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <form>
+        <div class="row">
+          <div class="col-9">
+            <input 
+              type="text" class="form-control" id="search" placeholder="Search by last name" 
+              name="lofficer" [(ngModel)]="lofficer" autofocus>
+          </div>
+          <div class="col-3">
+            <button class="btn-block btn-info form-control" (click)="searchOfficer()">Search</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-12" >
+      <table class="table row-border hover center-all ">
+        <thead>
+          <tr>
+            <td>Payroll</td>
+            <td>Badge</td>
+            <td>Title</td>
+            <td>Last</td>
+            <td>First</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let officer of (search_result|search:lofficer)">
+            <td>{{officer.payroll_number}}</td>
+            <td>{{officer.badge_id}}</td>
+            <td>{{officer.job_title}}</td>
+            <td>{{officer.lastname}}</td>
+            <td>{{officer.firstname}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+

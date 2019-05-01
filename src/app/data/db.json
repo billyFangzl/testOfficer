@@ -1,0 +1,32 @@
+{
+    "officers":[
+        {
+            "payroll_number":"123456",
+            "badge_id":845,
+            "job_title":"DET",
+            "lastname":"Dragon",
+            "firstname":"Paul"
+        },
+        {
+            "payroll_number":"345621",
+            "badge_id":44,
+            "job_title":"LIEUT",
+            "lastname":"Dragon Paul",
+            "firstname":""
+        },
+        {
+            "payroll_number":"845623",
+            "badge_id":69,
+            "job_title":"P/OFF",
+            "lastname":"Drake",
+            "firstname":"Jan"
+        },
+        {
+            "payroll_number":"656932",
+            "badge_id":778,
+            "job_title":"Probation",
+            "lastname":"Drake",
+            "firstname":"Jessica"
+        }
+    ]
+}
