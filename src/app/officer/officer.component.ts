@@ -12,6 +12,8 @@ export class OfficerComponent implements OnInit {
 
 
   lofficer:string="";
+  fofficer:string="";
+  iofficer:string="";
   search_result:Officer[];
   constructor(private tservice:TestappService) { }
 
@@ -20,7 +22,11 @@ export class OfficerComponent implements OnInit {
       this.search_result = data;
     });
   }
-
+  searchby(){
+    this.tservice.searchOfficer(this.lofficer,this.fofficer,this.iofficer).subscribe((data:any)=>{
+      this.search_result = data;
+    });
+  }
   ngOnInit() {
   }
 

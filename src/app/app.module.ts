@@ -6,12 +6,15 @@ import {TestappService} from './officer/testapp.service';
 import { OfficerComponent } from './officer/officer.component';
 import {FormsModule} from '@angular/forms';
 import { SearchPipe } from './search.pipe';
+import { SearchbyFirstNamePipe } from './searchby-first-name.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     OfficerComponent,
-    SearchPipe
+    SearchPipe,
+    SearchbyFirstNamePipe,
   ],
   imports: [
     BrowserModule,

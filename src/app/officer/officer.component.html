@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Officer List</h1>
+      <h1 class="text-uppercase">Officer List</h1>
     </div>
   </div>
 
@@ -9,13 +9,23 @@
     <div class="col-sm-12">
       <form>
         <div class="row">
-          <div class="col-9">
+          <div class="col-3">
             <input 
               type="text" class="form-control" id="search" placeholder="Search by last name" 
               name="lofficer" [(ngModel)]="lofficer" autofocus>
           </div>
           <div class="col-3">
-            <button class="btn-block btn-info form-control" (click)="searchOfficer()">Search</button>
+            <input 
+              type="text" class="form-control" id="search" placeholder="Search by first name" 
+              name="fofficer" [(ngModel)]="fofficer">
+          </div>
+          <div class="col-3">
+            <input 
+              type="text" class="form-control" id="search" placeholder="Search by  badge" 
+              name="iofficer" [(ngModel)]="iofficer">
+          </div>
+          <div class="col-3">
+            <button class="btn-block btn-info form-control" (click)="searchby()">Search</button>
           </div>
 
         </div>
@@ -25,9 +35,9 @@
   <hr/>
   <div class="row">
     <div class="col-sm-12" >
-      <table class="table row-border hover center-all ">
+      <table class="table table-bordered table-striped ">
         <thead>
-          <tr>
+          <tr class="text-center text-uppercase">
             <td>Payroll</td>
             <td>Badge</td>
             <td>Title</td>
@@ -36,12 +46,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let officer of (search_result|search:lofficer)">
+          <tr class="text-center" *ngFor="let officer of (search_result|search:lofficer|searchbyFirstName:fofficer)">
             <td>{{officer.payroll_number}}</td>
             <td>{{officer.badge_id}}</td>
             <td>{{officer.job_title}}</td>
-            <td>{{officer.lastname}}</td>
-            <td>{{officer.firstname}}</td>
+            <td>{{officer.last_name}}</td>
+            <td>{{officer.first_name}}</td>
           </tr>
 
         </tbody>
